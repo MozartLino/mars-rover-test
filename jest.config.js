@@ -26,4 +26,4 @@ module.exports = {
   coverageReporters: ["text", "html", "cobertura", "clover"],
   maxWorkers: 1,
   testMatch: ["**/test/**/*.test.js?(x)"],
-};
+}

@@ -1,18 +1,20 @@
 {
-  "name": "test_rover",
+  "name": "mars-rover-test",
   "version": "1.0.0",
-  "description": "Test Rover for Foxibit",
+  "description": "Mar's Rover test for Foxibit",
   "main": "index.js",
   "scripts": {
+    "init": "node src/index.js",
     "test": "jest test --silent",
-    "check": "npm run-script lint && npm run-script test-verbose",
+    "check": "npm run-script lint && npm run-script test",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js"
   },
   "author": "Ricardo Mozart Lino",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "n-readlines": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
