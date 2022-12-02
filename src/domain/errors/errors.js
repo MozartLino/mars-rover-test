@@ -2,10 +2,8 @@
 const CoreError = require('./coreError');
 
 class OutOfBoundaryError extends CoreError {
-  constructor() {
-    super(
-      'Argument x and y must be greater than zero and less than upper and right values.'
-    );
+  constructor(message = "Rover can not go outside the Plateau's boundaries.") {
+    super(message);
   }
 }
 

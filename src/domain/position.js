@@ -99,7 +99,9 @@ const PositionWrapper = (() => {
      */
     static create(position) {
       if (Position.isOutOfBound(position)) {
-        throw new OutOfBoundaryError('Out of boundary');
+        throw new OutOfBoundaryError(
+          `Rover can not go outside the Plateau's boundaries. Current plateau [${position.right},${position.upper}]. Rover tryied to move to [${position.x},${position.y}].`
+        );
       }
 
       if (!Position.isValidPlateau(position.upper, position.right)) {
