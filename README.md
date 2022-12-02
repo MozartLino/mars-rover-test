@@ -61,5 +61,5 @@ Ao encotrar a solução utilizando o dicionario, comecei a escrever o meu codigo
 
 [travis-image]: https://travis-ci.com/MozartLino/mars-rover-test.svg?token=aJRRfnEXpnSoXxWf96zv&branch=master
 [travis-url]: https://travis-ci.com/github/MozartLino/mars-rover-test
-[coveralls-image]: https://coveralls.io/repos/github/MozartLino/mars-rover-test/badge.svg?branch=master
+[coveralls-image]: https://coveralls.io/repos/github/MozartLino/mars-rover-test/badge.svg?YaZTlmvpKXPgs5JHPqXqYcXZFHInLEjJo?branch=master
 [coveralls-url]: https://coveralls.io/github/MozartLino/mars-rover-test?branch=master
