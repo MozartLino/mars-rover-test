@@ -1,11 +1,7 @@
 /* eslint-disable max-classes-per-file */
 const CoreError = require('./coreError');
 
-class OutOfBoundaryError extends CoreError {
-  constructor(message = "Rover can not go outside the Plateau's boundaries.") {
-    super(message);
-  }
-}
+class OutOfBoundaryError extends CoreError {}
 
 class InvalidDirectionError extends CoreError {
   constructor(message = 'Argument direction must be N, W, S or E ') {
