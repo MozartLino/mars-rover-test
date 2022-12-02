@@ -13,8 +13,11 @@
   ],
   "exclude": [
     "coverage/**",
+    "reports/**",
     "node_modules/**",
-    "test/**"
+    "test/**",
+    "src/index.js",
+    ".eslintrc.js"
   ],
   "sourceMap": true,
   "reporter": [

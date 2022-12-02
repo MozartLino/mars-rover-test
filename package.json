@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "init": "node src/index.js",
-    "test": "jest test --silent",
+    "test": "nyc jest test --colors",
     "check": "npm run-script lint && npm run-script test",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js",
