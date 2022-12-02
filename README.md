@@ -29,7 +29,7 @@ No desafio Rover é possivel identificar uma solução simples para encontrar a 
 
 A solução apresentada então, se utiliza de um dicionário para mapear os possíveis movimentos do robo, e com a combinação da instrução com a posição do robo, o dicionario teria o mapeamento com o resultado da proxima posição do robo. 
 
-```json
+```js
 const marsRoverCommandsMap = {
   NL: { method: 'moveSideways', params: 'W' },
   NR: { method: 'moveSideways', params: 'E' },
@@ -51,7 +51,7 @@ Com isso a classe Position tera apenas dois metodos, a de mover para os lados, e
 O segundo desafio que identifiquei do exercicio, foi o possivel tamanho do arquivo que contem as instruçoes, caso o arquivo fosse muito grande, o codigo, nao poderia carregar todo o arquivo na memoria, com isso, resolvi utilizar a função `createReadStream` do fs, onde é possível processar o arquivo em partes. No entanto, a função `createReadStream`, é intrusiva, o que acloparia a regra de negocio a uma camada de infra, entao resolvi utilizar uma biblioteca `n-readlines` e isolá-la da regra de negócio
 
 
-PASSO A PASSO:
+## PASSO A PASSO:
 
 Primeiro passo foi entender a solução do desafio, com os exemplos do desafio criei alguns testes para me guiar no desenvolvimento da solução.
 

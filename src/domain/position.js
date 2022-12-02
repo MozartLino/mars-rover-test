@@ -1,9 +1,9 @@
-const consts = require('../utils/consts')
+const consts = require('../utils/consts');
 const {
   OutOfBoundaryError,
   InvalidPlateauCoordinatesError,
   InvalidDirectionError,
-} = require('./errors/errors')
+} = require('./errors/errors');
 
 /**
  * // THIS COMMENT IS ONLY TO EXPLAIN WHY I MADE THIS DECISION BELOW
@@ -22,11 +22,11 @@ const {
 const PositionWrapper = (() => {
   class Position {
     constructor(position) {
-      this.x = position.x
-      this.y = position.y
-      this.direction = position.direction
-      this.right = position.right
-      this.upper = position.upper
+      this.x = position.x;
+      this.y = position.y;
+      this.direction = position.direction;
+      this.right = position.right;
+      this.upper = position.upper;
     }
 
     /**
@@ -42,7 +42,7 @@ const PositionWrapper = (() => {
       return Position.create({
         ...this,
         direction,
-      })
+      });
     }
 
     /**
@@ -59,7 +59,7 @@ const PositionWrapper = (() => {
         ...this,
         x: this.x + x,
         y: this.y + y,
-      })
+      });
     }
 
     /**
@@ -68,7 +68,7 @@ const PositionWrapper = (() => {
      * @return {string} return the mars rover's current position
      */
     toString() {
-      return `${this.x} ${this.y} ${this.direction}`
+      return `${this.x} ${this.y} ${this.direction}`;
     }
 
     static isOutOfBound(position) {
@@ -77,15 +77,15 @@ const PositionWrapper = (() => {
         position.y < 0 ||
         position.x > position.right ||
         position.y > position.upper
-      )
+      );
     }
 
     static isValidDirection(direction) {
-      return consts.directions.includes(direction)
+      return consts.directions.includes(direction);
     }
 
     static isValidPlateau(upper, right) {
-      return upper > 0 && right > 0
+      return upper > 0 && right > 0;
     }
 
     /**
@@ -99,24 +99,24 @@ const PositionWrapper = (() => {
      */
     static create(position) {
       if (Position.isOutOfBound(position)) {
-        throw new OutOfBoundaryError('Out of boundary')
+        throw new OutOfBoundaryError('Out of boundary');
       }
 
       if (!Position.isValidPlateau(position.upper, position.right)) {
-        throw new InvalidPlateauCoordinatesError()
+        throw new InvalidPlateauCoordinatesError();
       }
 
       if (!Position.isValidDirection(position.direction)) {
-        throw new InvalidDirectionError('Unknown direction')
+        throw new InvalidDirectionError('Unknown direction');
       }
 
-      return new Position(position)
+      return new Position(position);
     }
   }
 
   return {
     create: Position.create,
-  }
-})()
+  };
+})();
 
-module.exports = Object.freeze(PositionWrapper)
+module.exports = Object.freeze(PositionWrapper);

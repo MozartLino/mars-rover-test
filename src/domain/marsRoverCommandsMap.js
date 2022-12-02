@@ -11,6 +11,6 @@ const marsRoverCommandsMap = {
   EM: { method: 'moveForward', params: [1, 0] },
   SM: { method: 'moveForward', params: [0, -1] },
   WM: { method: 'moveForward', params: [-1, 0] },
-}
+};
 
-module.exports = marsRoverCommandsMap
+module.exports = marsRoverCommandsMap;

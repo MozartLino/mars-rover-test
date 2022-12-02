@@ -1,6 +1,6 @@
 module.exports = class WriteLineFile {
   constructor(writer) {
-    this.writer = writer
+    this.writer = writer;
   }
 
   /**
@@ -10,8 +10,8 @@ module.exports = class WriteLineFile {
    */
   async save(line) {
     await new Promise((resolve) => {
-      this.writer.write(`${line}\n`, resolve)
-    })
+      this.writer.write(`${line}\n`, resolve);
+    });
   }
 
   /**
@@ -20,6 +20,6 @@ module.exports = class WriteLineFile {
    * @return { void } close stream
    */
   end() {
-    this.writer.end()
+    this.writer.end();
   }
-}
+};

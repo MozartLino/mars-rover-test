@@ -1,8 +1,8 @@
 module.exports = class ReadLineFile {
   constructor(reader) {
-    this.reader = reader
-    this.hasNextLine = false
-    this.nextLine = undefined
+    this.reader = reader;
+    this.hasNextLine = false;
+    this.nextLine = undefined;
   }
 
   /**
@@ -12,13 +12,13 @@ module.exports = class ReadLineFile {
    */
   next() {
     if (this.hasNextLine) {
-      const result = this.nextLine
-      this.hasNextLine = false
+      const result = this.nextLine;
+      this.hasNextLine = false;
 
-      return result
+      return result;
     }
 
-    return this.reader.next()
+    return this.reader.next();
   }
 
   /**
@@ -27,16 +27,16 @@ module.exports = class ReadLineFile {
    * @return { boolean } returns boolean
    */
   hasNext() {
-    const line = this.reader.next()
+    const line = this.reader.next();
 
     if (line) {
-      this.hasNextLine = true
-      this.nextLine = line
+      this.hasNextLine = true;
+      this.nextLine = line;
 
-      return true
+      return true;
     }
 
-    return false
+    return false;
   }
 
   /**
@@ -45,6 +45,6 @@ module.exports = class ReadLineFile {
    * @return { void } close stream
    */
   close() {
-    this.reader.close()
+    this.reader.close();
   }
-}
+};

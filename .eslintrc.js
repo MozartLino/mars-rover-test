@@ -13,7 +13,7 @@ module.exports = {
   rules: {
     'no-await-in-loop': 'off',
     'class-methods-use-this': 'off',
-    never: 'never',
+    semi: 'error',
     quotes: [2, 'single', { avoidEscape: true }],
     'prettier/prettier': [
       'error',
@@ -23,4 +23,4 @@ module.exports = {
       },
     ],
   },
-}
+};
