@@ -23,11 +23,11 @@ const main = async () => {
   try {
     await adapter.init();
   } catch (error) {
-    if (error instanceof CoreError) {
-      logger(error.logData().message);
+    if (!(error instanceof CoreError)) {
+      throw error;
     }
 
-    throw error;
+    logger(error.logData().message);
   }
 };
 
