@@ -22,6 +22,7 @@ INPUT_FILE_NAME=input.txt
 OUTPUT_FILE_NAME=output.txt
 DEBUG_ENABLE=true
 ```
+Existe um arquivo input.txt na raiz que você pode modificar ou adicionar mais comandos para o Rover se movimentar pelo plateau
 
 ## Sobre a Logica
 
